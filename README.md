@@ -1,6 +1,12 @@
 # LavaPlayer
 The official LavaPlayer's DiSky module, to play &amp; search music on Youtube, Soundcloud and more.
 
+# Installation
+
+1. Download DiSky, put it in the `/plugins/` folder
+2. Download LavaPlayer, put it in the `/plugins/DiSky/modules/` folder
+3. Restart your server
+
 # Audio Example
 
 Don't forget to use the `loadMusicCommands` function in order to load the commands!
