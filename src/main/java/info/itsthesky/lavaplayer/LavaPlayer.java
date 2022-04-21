@@ -46,6 +46,7 @@ public class LavaPlayer extends DiSkyModule {
 
         registerType(AudioTrack.class, "audiotrack", AudioTrack::getIdentifier);
         registerType(SearchTracks.AudioSource.class, "audiosource");
+        registerType(AudioListener.TrackEventType.class, "trackeventtype");
 
     }
 
