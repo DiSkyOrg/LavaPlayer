@@ -23,5 +23,6 @@ public class StopTrack extends AudioWaiterEffect{
     public void execute(@NotNull Guild guild, Bot bot) {
         LavaPlayer.getPlayer(bot, guild).clearQueue();
         LavaPlayer.getPlayer(bot, guild).stopTrack();
+        restart();
     }
 }
