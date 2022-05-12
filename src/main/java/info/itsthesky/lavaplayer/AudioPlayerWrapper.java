@@ -86,7 +86,7 @@ public class AudioPlayerWrapper implements AudioPlayer {
         public void onTrackEnd(AudioPlayer player, AudioTrack track, AudioTrackEndReason endReason) {
             if (endReason == AudioTrackEndReason.FINISHED) {
                 if (wrapper.isRepeating())
-                    wrapper.playTracks(true, track);
+                    wrapper.playTracks(true, track.makeClone());
                 else if (wrapper.shouldPlayNext())
                     wrapper.nextTrack();
             }
