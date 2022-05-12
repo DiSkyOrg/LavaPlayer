@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
         "add 10 second to track position of track event-bot is playing in event-guild"})
 public class ExprTrackPosition extends SimplePropertyExpression<AudioTrack, Timespan> {
 
-    static {
+    public static void load() {
         register(ExprTrackPosition.class, Timespan.class,
                 "[discord] [audio] track position",
                 "audiotrack"

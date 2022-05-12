@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class StopTrack extends AudioWaiterEffect{
 
-    static {
+    public static void load() {
         register(
                 StopTrack.class,
                 "stop (track|queue)"

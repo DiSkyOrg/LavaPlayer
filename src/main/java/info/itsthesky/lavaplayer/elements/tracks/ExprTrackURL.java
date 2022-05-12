@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @Examples("set {_url} to url of last played track.")
 public class ExprTrackURL extends SimplePropertyExpression<AudioTrack, String> {
 
-    static {
+    public static void load() {
         register(ExprTrackURL.class, String.class,
                 "[discord] [audio] track (url|uri)",
                 "audiotrack"

@@ -10,7 +10,7 @@ import net.dv8tion.jda.api.entities.Guild;
 
 public class GuildQueue extends MultipleGuildProperty<AudioTrack> {
 
-    static {
+    public static void load() {
         register(
                 GuildQueue.class,
                 AudioTrack.class,

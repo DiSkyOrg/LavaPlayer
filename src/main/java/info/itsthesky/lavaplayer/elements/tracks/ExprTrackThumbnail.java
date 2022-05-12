@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @Examples("set thumbnail of embed to thumbnail of last played track.")
 public class ExprTrackThumbnail extends SimplePropertyExpression<AudioTrack, String> {
 
-    static {
+    public static void load() {
         register(ExprTrackThumbnail.class, String.class,
                 "[discord] [audio] track thumbnail",
                 "audiotrack"

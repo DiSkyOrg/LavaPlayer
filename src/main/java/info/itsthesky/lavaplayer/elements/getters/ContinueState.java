@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
         "If it's true, and there's a next track available once the current finish, it will play it.."})
 public class ContinueState extends ChangeableSimplePropertyExpression<Guild, Boolean> {
 
-    static {
+    public static void load() {
         register(ContinueState.class, Boolean.class,
                 "[discord] continue [state]",
                 "guild"

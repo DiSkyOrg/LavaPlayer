@@ -31,7 +31,7 @@ import org.jetbrains.annotations.Nullable;
 })
 public class LoadLocal extends WaiterEffect<AudioTrack> {
 
-    static {
+    public static void load() {
         Skript.registerEffect(
                 LoadLocal.class,
                 "load local track [from] [the] [file] %string% and store (it|the track) in %-objects%"

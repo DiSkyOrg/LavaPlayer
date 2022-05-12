@@ -17,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class CurrentTrack extends SimpleExpression<AudioTrack> {
 
-    static {
+    public static void load() {
         Skript.registerExpression(
                 CurrentTrack.class,
                 AudioTrack.class,

@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class SkipTrack extends AudioWaiterEffect<AudioTrack> {
 
-    static {
+    public static void load() {
         register(
                 SkipTrack.class,
                 "skip [current] track",

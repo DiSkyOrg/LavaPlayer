@@ -33,6 +33,10 @@ public class LavaPlayer extends DiSkyModule {
         players = new HashMap<>();
         playerManager = new DefaultAudioPlayerManager();
 
+        registerType(AudioTrack.class, "audiotrack", AudioTrack::getIdentifier);
+        registerType(SearchTracks.AudioSource.class, "audiosource");
+        registerType(AudioListener.TrackEventType.class, "trackeventtype");
+
         try {
             loadClasses("info.itsthesky.lavaplayer.elements");
         } catch (IOException e) {
@@ -43,10 +47,6 @@ public class LavaPlayer extends DiSkyModule {
 
         AudioSourceManagers.registerRemoteSources(playerManager);
         AudioSourceManagers.registerLocalSource(playerManager);
-
-        registerType(AudioTrack.class, "audiotrack", AudioTrack::getIdentifier);
-        registerType(SearchTracks.AudioSource.class, "audiosource");
-        registerType(AudioListener.TrackEventType.class, "trackeventtype");
 
     }
 

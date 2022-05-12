@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class PauseAudio extends AudioWaiterEffect {
 
-    static {
+    public static void load() {
         register(
                 PauseAudio.class,
                 "pause [the] [audio] [track]"

@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 @Examples("set {_duration} to duration of last played track.")
 public class ExprTrackDuration extends SimplePropertyExpression<AudioTrack, Timespan> {
 
-    static {
+    public static void load() {
         register(ExprTrackDuration.class, Timespan.class,
                 "[discord] [audio] track duration",
                 "audiotrack"

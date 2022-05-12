@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @Description("Get ot set the repeating state of a guild. If it's true, the track will be repeating every time.")
 public class RepeatState extends ChangeableSimplePropertyExpression<Guild, Boolean> {
 
-    static {
+    public static void load() {
         register(RepeatState.class, Boolean.class,
                 "[discord] repeating [state]",
                 "guild"

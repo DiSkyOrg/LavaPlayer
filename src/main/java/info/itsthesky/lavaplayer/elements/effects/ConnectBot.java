@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 "disconnect the bot from event-guild"})
 public class ConnectBot extends SpecificBotEffect {
 
-    static {
+    public static void load() {
         System.out.println("Registering ...");
         Skript.registerEffect(
             ConnectBot.class,

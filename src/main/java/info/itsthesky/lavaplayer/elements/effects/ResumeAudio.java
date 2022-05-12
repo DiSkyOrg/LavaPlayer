@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ResumeAudio extends AudioWaiterEffect {
 
-    static {
+    public static void load() {
         register(
                 ResumeAudio.class,
                 "resume [the] [audio] [track]"

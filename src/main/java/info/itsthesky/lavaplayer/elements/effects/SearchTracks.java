@@ -22,7 +22,7 @@ public class SearchTracks extends WaiterEffect<AudioTrack[]> {
     private static final YoutubeAudioSourceManager youtubeSource = new YoutubeAudioSourceManager();
     private static final SoundCloudAudioSourceManager soundCloud = SoundCloudAudioSourceManager.createDefault();
 
-    static {
+    public static void load() {
         Skript.registerEffect(
             SearchTracks.class,
             "search in %audiosource% [for] %string% and store (them|the tracks) in %-objects%"

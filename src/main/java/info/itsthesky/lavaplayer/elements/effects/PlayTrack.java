@@ -25,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 @Examples("play {_track} in event-guild")
 public class PlayTrack extends SpecificBotEffect {
 
-    static {
+    public static void load() {
         Skript.registerEffect(PlayTrack.class,
                 "[force] (play|start) [the] [track[s]] %audiotracks% (in|to) [the] [guild] %guilds%"
         );

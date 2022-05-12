@@ -8,6 +8,7 @@ import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import info.itsthesky.disky.core.Bot;
 import info.itsthesky.disky.core.SkriptUtils;
 import info.itsthesky.lavaplayer.AudioListener;
+import info.itsthesky.lavaplayer.LavaPlayer;
 import net.dv8tion.jda.api.entities.Guild;
 import org.bukkit.event.Event;
 import org.jetbrains.annotations.NotNull;
@@ -15,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class TrackEvent extends SkriptEvent {
 
-    static {
+    public static void load() {
         Skript.registerEvent(
                 "Track Event", TrackEvent.class, AudioListener.TrackEvent.class,
                 "track [event] %trackeventtype%"
@@ -28,10 +29,10 @@ public class TrackEvent extends SkriptEvent {
                 "  - SEEK"
         ).examples("on track play:", "on track end:", "on track exception:");
 
-        SkriptUtils.registerValue(AudioListener.TrackEvent.class, Bot.class, AudioListener.TrackEvent::getBot);
-        SkriptUtils.registerValue(AudioListener.TrackEvent.class, Guild.class, AudioListener.TrackEvent::getGuild);
-        SkriptUtils.registerValue(AudioListener.TrackEvent.class, AudioTrack.class, AudioListener.TrackEvent::getTrack);
-        SkriptUtils.registerValue(AudioListener.TrackEvent.class, AudioListener.TrackEventType.class, AudioListener.TrackEvent::getType);
+        LavaPlayer.getInstance().registerValue(AudioListener.TrackEvent.class, Bot.class, AudioListener.TrackEvent::getBot);
+        LavaPlayer.getInstance().registerValue(AudioListener.TrackEvent.class, Guild.class, AudioListener.TrackEvent::getGuild);
+        LavaPlayer.getInstance().registerValue(AudioListener.TrackEvent.class, AudioTrack.class, AudioListener.TrackEvent::getTrack);
+        LavaPlayer.getInstance().registerValue(AudioListener.TrackEvent.class, AudioListener.TrackEventType.class, AudioListener.TrackEvent::getType);
 
     }
 

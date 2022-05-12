@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @Examples("set {_author} to author of last played track.")
 public class ExprTrackAuthor extends SimplePropertyExpression<AudioTrack, String> {
 
-    static {
+    public static void load() {
         register(ExprTrackAuthor.class, String.class,
                 "[discord] [audio] track author",
                 "audiotrack"

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 @Examples("set {_id} to identifier of current track of event-guild")
 public class ExprTrackIdentifier extends SimplePropertyExpression<AudioTrack, String> {
 
-    static {
+    public static void load() {
         register(ExprTrackIdentifier.class, String.class,
                 "[discord] [audio] track id[entifier]",
                 "audiotrack"

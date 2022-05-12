@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 public class ExprTrackTitle extends SimplePropertyExpression<AudioTrack, String> {
 
-    static {
+    public static void load() {
         register(ExprTrackTitle.class, String.class,
                 "[discord] [audio] track title",
                 "audiotrack"
